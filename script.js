@@ -35,6 +35,10 @@ async function buscarFilmes(textoRecebido) {
         }
 
         const dados = await resposta.json();
+        if (textoRecebido.trim() !== barraPesquisa.value.trim()) {
+            return;
+        }
+        
         listaFilmes.innerHTML = "";
 
         if (dados.results.length === 0) {
@@ -42,6 +46,7 @@ async function buscarFilmes(textoRecebido) {
         } else {
             semFilme.style.display = "none";
         }
+
         mostrarFilmes(dados.results);
     }
 
