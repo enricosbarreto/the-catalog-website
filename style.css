@@ -1,0 +1,68 @@
+:root {
+    --cor-fundo: #102A43;
+    --cor-texto: #F0F0F0;
+    --cor-destaque: #A8DADC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    
+}
+
+#titulo {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 70px;
+    font-size: 4rem;
+}
+
+#barra-pesquisa {
+    border-radius: 1000px;
+    border: 2px solid var(--cor-destaque);
+    padding: 16px 17px;
+    width: min(92vw, 800px);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color: var(--cor-texto);
+    font-size: 1.3rem;
+}
+
+.classe-poster {
+    width: 10rem;
+    height: auto;
+    
+}
+
+.classe-nota {
+    margin-right: 2rem;
+}
+
+
+.item-lista {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+    border: 3px solid gray;
+}
+
+#sem-filme {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+}
