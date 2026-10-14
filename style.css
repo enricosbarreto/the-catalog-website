@@ -52,12 +52,18 @@ body {
 
 
 .item-lista {
-    display: flex;
     font-size: 1.5rem;
-    gap: 2rem;
-    align-items: center;
     margin-top: 1rem;
     border: 3px solid gray;
+    list-style: none;
+}
+
+.classe-link {
+    gap: 2rem;
+    align-items: center;
+    display: flex;
+    color: inherit;
+    text-decoration: none;
 }
 
 #sem-filme {

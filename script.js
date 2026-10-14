@@ -11,9 +11,6 @@ barraPesquisa.addEventListener("input", function () {
     timer = setTimeout(() => {
         buscarFilmes(barraPesquisa.value);
     }, 300);
-
-
-
 });
 
 
@@ -35,10 +32,11 @@ async function buscarFilmes(textoRecebido) {
         }
 
         const dados = await resposta.json();
+        
         if (textoRecebido.trim() !== barraPesquisa.value.trim()) {
             return;
         }
-        
+
         listaFilmes.innerHTML = "";
 
         if (dados.results.length === 0) {
@@ -63,28 +61,31 @@ function mostrarFilmes(filmesRecebidos) {
         const posterFilme = document.createElement("img");
         const nomeFilme = document.createElement("span");
         const notaFilme = document.createElement("span");
+        const linkPaginaFilme = document.createElement("a");
 
 
 
 
         if (filme.poster_path === null) {
-            semPoster.textContent = "Titulo não tem um poster";
-            novoNaLista.append(semPoster);
+            semPoster.textContent = "Título não tem um poster";
+            linkPaginaFilme.append(semPoster);
         } else {
             posterFilme.src = urlPosterFixo + filme.poster_path;
-            novoNaLista.append(posterFilme);
+            linkPaginaFilme.append(posterFilme);
         }
 
         posterFilme.className = "classe-poster";
         nomeFilme.className = "classe-nome";
         notaFilme.className = "classe-nota";
         novoNaLista.className = "item-lista";
+        linkPaginaFilme.className = "classe-link";
 
-
+        linkPaginaFilme.href = "filme.html?id=" + filme.id;
         nomeFilme.textContent = filme.title;
         notaFilme.textContent = filme.vote_average;
-        novoNaLista.append(nomeFilme, notaFilme);
-        listaFilmes.append(novoNaLista);
 
+        linkPaginaFilme.append(nomeFilme, notaFilme);
+        novoNaLista.append(linkPaginaFilme);
+        listaFilmes.append(novoNaLista);
     });
 }
