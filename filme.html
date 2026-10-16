@@ -1,26 +1,39 @@
-        <!DOCTYPE html>
-        <html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="filme.css">
-            <title>PAGINA DO FILME</title>
-        </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="filme.css">
+    <title>PAGINA DO FILME</title>
+</head>
 
-        <body>
+<body>
+    <div id="caixa-pai">
+        <div id="caixa-titulo-poster">
             <h1 id="titulo"></h1>
-            <h2 id="descricao-filme"></h2>
-            <p id="nota-filme"></p>
             <img id="poster-filme">
-            <p id="data-lancamento"></p>
-            <p id="duracao"></p>
-            <p id="sem-id">Filme não encontrado</p>
+        </div>
+        <div id="caixa-informacoes">
+            <p id="descricao-filme"></p>
+            <div id="caixa-nota-duracao">
+                <div id="caixa-nota-data">
+                    <p id="nota-filme"></p>
+                    <p id="data-lancamento"></p>
+                </div>
+                <div id="caixa-duracao-genero">
+                    <p id="duracao"></p>
+                    <p id="genero-filme"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p id="sem-id">Filme não encontrado</p>
 
 
 
-            <script src="config.js"></script>
-            <script src="filme.js"></script>
-        </body>
+    <script src="config.js"></script>
+    <script src="filme.js"></script>
+</body>
 
-        </html>
+</html>

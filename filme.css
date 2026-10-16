@@ -1,6 +1,75 @@
+:root {
+    --cor-fundo: #102A43;
+    --cor-texto: #F0F0F0;
+    --cor-destaque: #A8DADC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+}
+
+#caixa-pai {
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10rem;
+    max-width: min(90vw, 70rem);
+    
+}
+
 #sem-id {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
     display: none;
+
+}
+
+#descricao-filme {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 40rem;
+}
+
+#nota-filme {
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+    font-size: 1rem;
+}
+
+#data-lancamento {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#duracao {
+    margin-bottom: 1rem;
+}
+
+#caixa-duracao-genero {
+    font-size: 1rem;
+}
+
+#caixa-informacoes {
+    display: flex;
+    flex-direction: column;
+}
+
+#caixa-nota-duracao {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
 }
