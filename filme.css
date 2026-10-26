@@ -73,3 +73,9 @@ body {
     flex-direction: row;
     gap: 8rem;
 }
+#sem-poster {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+}
